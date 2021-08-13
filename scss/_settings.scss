@@ -1,0 +1,50 @@
+$kurale: 'Kurale', serif;
+$oc: 'Open Sans', sans-serif;
+
+// ширифт
+@mixin fontText($color) {
+    font-family: $oc;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin fontTextBold($color) {
+    font-family: $oc;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin fontTitle($color) {
+    font-family: $kurale;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 42px;
+    color: $color;
+}
+
+@mixin flex($jc,$ai) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+body{
+    @include fontText(colorBlack)
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+}
